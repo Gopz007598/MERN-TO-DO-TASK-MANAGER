@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Student Task Manager</h1>
+    <p>Organize your subjects, assignments, and deadlines.</p>
+  </header>
+
+  <main class="container">
+    <section class="stats">
+      <div class="stat-card">
+        <h3>Total Tasks</h3>
+        <p id="totalTasks">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Pending</h3>
+        <p id="pendingTasks">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Completed</h3>
+        <p id="completedTasks">0</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Add Assignment</h2>
+      <form id="taskForm">
+        <input id="subject" placeholder="Subject name" required />
+        <input id="title" placeholder="Assignment title" required />
+        <input id="deadline" type="date" required />
+        <button type="submit">Add Assignment</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="toolbar">
+        <input id="search" placeholder="Search assignments..." />
+        <select id="filter">
+          <option value="all">All Tasks</option>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+        </select>
+      </div>
+      <h2>Your Assignments</h2>
+      <div id="taskList">
+        <p>Loading assignments...</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
